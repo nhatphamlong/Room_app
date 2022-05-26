@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_bgcolor"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="25sp"
+        android:text="THÊM PHÒNG TRỌ"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:text="Tên phòng:" />
+        <EditText
+            android:id="@+id/edTenPhong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Tên hoặc số phòng"
+            android:textSize="18dp"
+            android:ems="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Sức chứa:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/edSucchua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Số người tối đa"
+            android:textSize="18dp"
+            android:inputType="number"
+            android:ems="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Diện tích:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edDienTich"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Ví dụ: 3x4"
+            android:textSize="18dp"
+            android:ems="10"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Giá thuê:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edGiaThue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Giá thuê phòng"
+            android:textSize="18dp"
+            android:inputType="number"
+            android:ems="10"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Số điện:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edSoDien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Số điện hiện tại"
+            android:textSize="18dp"
+            android:inputType="number"
+            android:ems="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Số nước:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edSoNuoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Số nước hiện tại"
+            android:textSize="18dp"
+            android:inputType="number"
+            android:ems="10"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Dv khác:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edTTKhac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Ví dụ: tolet ngoài"
+            android:textSize="18dp"
+            android:ems="10"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btThemPT"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Thêm" />
+        <Button
+            android:id="@+id/btHuy"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Huỷ" />
+    </LinearLayout>
+</LinearLayout>

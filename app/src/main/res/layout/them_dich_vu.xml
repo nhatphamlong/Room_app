@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/img_bgcolor">
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:text="THÊM DỊCH VỤ"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Tên dịch vụ:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edTenDV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="điện, nước, ... "
+            android:textSize="18dp"
+            android:ems="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Đơn vị tính:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edQuicach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Kwh, tháng, m3, ... "
+            android:textSize="18dp"
+            android:ems="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Giá:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="18dp"
+            android:ems="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnThemDichVu"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Thêm" />
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Huỷ" />
+    </LinearLayout>
+
+</LinearLayout>

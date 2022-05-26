@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img_bgcolor">
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:text="LẬP HÓA ĐƠN PHÒNG 04"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvThang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:text="Tháng: "/>
+        <EditText
+            android:id="@+id/edThang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:text="4"
+            android:maxLength="2"
+            android:ems="2"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvNgay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Ngày lập:30/04/2022"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Số điện: "
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edSoDien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="số điện của phòng "
+            android:textSize="18dp"
+            android:ems="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Số nước: "
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edSoNuoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="số nước của phòng "
+            android:textSize="18dp"
+            android:ems="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Chi phí khác:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/edGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="chi phí khác"
+            android:inputType="number"
+            android:textSize="18dp"
+            android:ems="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btThemHoaDon"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Thêm" />
+        <Button
+            android:id="@+id/btHuy"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Huỷ" />
+    </LinearLayout>
+
+</LinearLayout>

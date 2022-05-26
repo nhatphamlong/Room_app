@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/donglayout"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvPhong"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/vongtronhd"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Phòng 04"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:ems="3" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvGia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:text="Phòng: 3.000.000đ"/>
+                <TextView
+                    android:id="@+id/tvThanghd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Tháng 8"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvChiPhiKhac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Khác: 200.000đ"/>
+            <TextView
+                android:id="@+id/tvThanhTien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Thành Tiền: 3.200.000đ"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
