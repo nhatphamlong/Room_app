@@ -12,11 +12,11 @@
         android:layout_height="match_parent">
         <TextView
             android:id="@+id/tvPhong"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/vongtronhd"
-            android:textSize="20dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:text="Phòng 04"
             android:gravity="center"
@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textColor="@color/black"
                     android:text="Phòng: 3.000.000đ"/>
                 <TextView
