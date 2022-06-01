@@ -13,8 +13,9 @@
         <ImageView
             android:id="@+id/tvAvatar"
             android:gravity="center"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             android:src="@drawable/avatar"/>
         <LinearLayout
             android:layout_width="wrap_content"

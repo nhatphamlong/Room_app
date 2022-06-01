@@ -287,6 +287,7 @@ public class DatabaseQLPT extends SQLiteOpenHelper {
         SQLiteDatabase db=this.getWritableDatabase();
         return db.delete(TABLE_NAME3,"PHONG_O = ?",new String[] {p});
     }
+
     //BANG HOA DON HANG THANG
 
     public boolean themHoaDon(String t,String p,String sd,String sn,String cpk,String tt,String nl,String tinht){
