@@ -50,7 +50,8 @@ public class HoaDonActivity extends AppCompatActivity {
         TienNuoc();
         customAdaper = new HoaDonThangAdapter(this, R.layout.dong_hoa_don, arrHoaDonDa);
         lvhoadon.setAdapter(customAdaper);
-
+        LoaiHoaDon();
+        SuaHoaDon();
         actionBar();
     }
 
@@ -148,6 +149,130 @@ public class HoaDonActivity extends AppCompatActivity {
             }
             tiennuoc=Integer.parseInt(b.getDON_GIA());
         }
+    }
+    public void LoaiHoaDon(){
+        rdgLoai.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                int checkedRadioId = rdgLoai.getCheckedRadioButtonId();
+                if(checkedRadioId== R.id.rdChua) {
+                    showHoaDon(1);
+                    customAdaper.notifyDataSetChanged();
+                } else if(checkedRadioId== R.id.rdDa ) {
+                    showHoaDon(0);
+                    customAdaper.notifyDataSetChanged();
+                }
+            }
+        });
+    }
+    public void SuaHoaDon(){
+        lvhoadon.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View v,
+                                           int pos, long id) {
+                final HoaDonThang p;
+                p = (HoaDonThang) arrHoaDonDa.get(pos);
+                final Dialog dialog=new Dialog(HoaDonActivity.this);
+                dialog.setTitle("Chi tiết hoá đơn");
+                dialog.setContentView(R.layout.chi_tiet_hoa_don);
+                Button btSuahoadon=(Button)dialog.findViewById(R.id.btSuahoadon);
+                Button huy=(Button)dialog.findViewById(R.id.btHuy);
+                final TextView tvtitle=(TextView)dialog.findViewById(R.id.tvtitle);
+                final TextView tvThang=(TextView)dialog.findViewById(R.id.tvThang);
+                final TextView tvNgay=(TextView)dialog.findViewById(R.id.tvNgay);
+                final TextView tvGiaPhong=(TextView)dialog.findViewById(R.id.tvGiaPhong);
+                final TextView tvSoDien=(TextView)dialog.findViewById(R.id.tvSoDien);
+                final TextView tvSoNuoc=(TextView)dialog.findViewById(R.id.tvSoNuoc);
+                final TextView tvchiphikhac=(TextView)dialog.findViewById(R.id.tvchiphikhac);
+                final TextView tvThanhTien=(TextView)dialog.findViewById(R.id.tvThanhTien);
+                final RadioGroup rdgThanhtoan=(RadioGroup)dialog.findViewById(R.id.rdgThanhtoan);
+                RadioButton rdRoi=(RadioButton)dialog.findViewById(R.id.rdRoi);
+                RadioButton rdChua=(RadioButton)dialog.findViewById(R.id.rdChua);
+                RadioButton rdHuy=(RadioButton)dialog.findViewById(R.id.rdHuy);
+                PhongTro b=new PhongTro();
+                Cursor a= MainActivity.db.Lay1PhongTro(p.getPHONGID());
+                if(a.getCount() == 0){
+                }
+                else{
+                    while(a.moveToNext()){
+                        b.setID(a.getString(0));
+                        b.setTEN_PHONG(a.getString(1));
+                        b.setSUC_CHUA(a.getString(2));
+                        b.setDIEN_TICH(a.getString(3));
+                        b.setGIA_THUE(a.getString(4));
+                        b.setTHONG_TIN_KHAC(a.getString(5));
+                        b.setSO_DIEN(a.getString(6));
+                        b.setSO_NUOC(a.getString(7));
+                    }
+                    tvtitle.setText("Hoá đơn "+b.getTEN_PHONG());
+                }
+                final PhongTro c=b;
+                tvThang.setText("Tháng: "+p.getTHANG());
+                tvNgay.setText("Ngày lập "+p.getNGAY_LAP());
+                NumberFormat formatter = new DecimalFormat("#,###");
+                tvGiaPhong.setText(formatter.format(Double.parseDouble(b.getGIA_THUE())));
+                String Dien=formatter.format(Double.parseDouble(p.getSO_DIEN()))+"x"+
+                        formatter.format(Double.parseDouble(tiendien+""))+"="+
+                        formatter.format(Double.parseDouble((Integer.parseInt(p.getSO_DIEN())*tiendien)+""));
+                String Nuoc=formatter.format(Double.parseDouble(p.getSO_NUOC()))+"x"+
+                        formatter.format(Double.parseDouble(tiennuoc+""))+"="+
+                        formatter.format(Double.parseDouble((Integer.parseInt(p.getSO_NUOC())*tiennuoc)+""));
+                tvSoDien.setText(Dien);
+                tvSoNuoc.setText(Nuoc);
+                tvchiphikhac.setText(formatter.format(Double.parseDouble(p.getCHI_PHI_KHAC())));
+                if(p.getTINH_TRANG().equals("Chưa thanh toán"))
+                    rdChua.setChecked(true);
+                else if(p.getTINH_TRANG().equals("Đã thanh toán")){
+                    rdRoi.setChecked(true);
+                    rdRoi.setEnabled(false);
+                    rdChua.setVisibility(View.GONE);
+                    rdHuy.setVisibility(View.GONE);
+                    btSuahoadon.setVisibility(View.GONE);
+                }
+                tvThanhTien.setText(p.getTHANH_TIEN());
+                btSuahoadon.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String tt="";
+                        int checkedRadioId = rdgThanhtoan.getCheckedRadioButtonId();
+                        if(checkedRadioId== R.id.rdChua) {
+                            tt="Chưa thanh toán";
+                            return;
+                        } else if(checkedRadioId== R.id.rdRoi ) {
+                            tt="Đã thanh toán";
+                            boolean them=MainActivity.db.capnhatHoaDon(p.getID(),p.getTHANG(),p.getPHONGID(),p.getSO_DIEN(),
+                                    p.getSO_NUOC(),p.getCHI_PHI_KHAC(),p.getTHANH_TIEN(),p.getNGAY_LAP(),tt);
+                            if(them==true){
+                                String dien=Integer.parseInt(c.getSO_DIEN())+Integer.parseInt(p.getSO_DIEN())+"";
+                                String nuoc=Integer.parseInt(c.getSO_NUOC())+Integer.parseInt(p.getSO_NUOC())+"";
+                                MainActivity.db.capnhatDienNuoc(c,dien,nuoc);
+                                Toast.makeText(HoaDonActivity.this,"Cập nhật hoá đơn thành công",Toast.LENGTH_LONG).show();
+                            }
+                            else
+                                Toast.makeText(HoaDonActivity.this,"Không thành công",Toast.LENGTH_LONG).show();
+                        } else if(checkedRadioId== R.id.rdHuy ){
+                            Integer them=MainActivity.db.xoaHoaDon(p.getID());
+                            if(them>0){
+                                Toast.makeText(HoaDonActivity.this,"Đã xoá hoá đơn",Toast.LENGTH_LONG).show();
+                            }
+                            else
+                                Toast.makeText(HoaDonActivity.this,"Lỗi, vui lòng thao tác lại",Toast.LENGTH_LONG).show();
+                        }
+                        showHoaDon(1);
+                        customAdaper.notifyDataSetChanged();
+                        dialog.dismiss();
+                    }
+                });
+                huy.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+                return true;
+            }
+        });
     }
 
 }
