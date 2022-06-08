@@ -45,8 +45,12 @@ public class HoaDonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hoa_don);
         Anhxa();
+        showHoaDon(1);
+        TienDien();
+        TienNuoc();
         customAdaper = new HoaDonThangAdapter(this, R.layout.dong_hoa_don, arrHoaDonDa);
         lvhoadon.setAdapter(customAdaper);
+
         actionBar();
     }
 
@@ -88,6 +92,62 @@ public class HoaDonActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    public void showHoaDon(int loai){
+        Cursor a=MainActivity.db.getAllHoaDon();
+        if(a.getCount() == 0){
+        }
+        else{
+            arrHoaDonDa.clear();
+            while(a.moveToNext()){
+                HoaDonThang b=new HoaDonThang();
+                b.setID(a.getString(0));
+                b.setTHANG(a.getString(1));
+                b.setPHONGID(a.getString(2));
+                b.setSO_DIEN(a.getString(3));
+                b.setSO_NUOC(a.getString(4));
+                b.setCHI_PHI_KHAC(a.getString(5));
+                b.setTHANH_TIEN(a.getString(6));
+                b.setNGAY_LAP(a.getString(7));
+                b.setTINH_TRANG(a.getString(8));
+                if(loai==0&& a.getString(8).equals("Đã thanh toán"))
+                    arrHoaDonDa.add(b);
+                else if(loai==1&&a.getString(8).equals("Chưa thanh toán"))
+                    arrHoaDonDa.add(b);
+            }
+        }
+    }
+    public void TienDien(){
+        DichVu b=new DichVu();
+        Cursor a= MainActivity.db.get1DichVu("1");
+        if(a.getCount() == 0){
+            tiendien=1;
+        }
+        else{
+            while(a.moveToNext()){
+                b.setMaCP(a.getString(0));
+                b.setTEN_CP(a.getString(1));
+                b.setQUY_CACH(a.getString(2));
+                b.setDON_GIA(a.getString(3));
+            }
+            tiendien=Integer.parseInt(b.getDON_GIA());
+        }
+    }
 
+    public void TienNuoc(){
+        DichVu b=new DichVu();
+        Cursor a= MainActivity.db.get1DichVu("2");
+        if(a.getCount() == 0){
+            tiennuoc=1;
+        }
+        else{
+            while(a.moveToNext()){
+                b.setMaCP(a.getString(0));
+                b.setTEN_CP(a.getString(1));
+                b.setQUY_CACH(a.getString(2));
+                b.setDON_GIA(a.getString(3));
+            }
+            tiennuoc=Integer.parseInt(b.getDON_GIA());
+        }
+    }
 
 }
