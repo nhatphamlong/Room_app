@@ -46,7 +46,8 @@ public class HoaDonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hoa_don);
         Anhxa();
         showHoaDon(1);
-
+        TienDien();
+        TienNuoc();
         customAdaper = new HoaDonThangAdapter(this, R.layout.dong_hoa_don, arrHoaDonDa);
         lvhoadon.setAdapter(customAdaper);
 
@@ -115,6 +116,38 @@ public class HoaDonActivity extends AppCompatActivity {
             }
         }
     }
+    public void TienDien(){
+        DichVu b=new DichVu();
+        Cursor a= MainActivity.db.get1DichVu("1");
+        if(a.getCount() == 0){
+            tiendien=1;
+        }
+        else{
+            while(a.moveToNext()){
+                b.setMaCP(a.getString(0));
+                b.setTEN_CP(a.getString(1));
+                b.setQUY_CACH(a.getString(2));
+                b.setDON_GIA(a.getString(3));
+            }
+            tiendien=Integer.parseInt(b.getDON_GIA());
+        }
+    }
 
+    public void TienNuoc(){
+        DichVu b=new DichVu();
+        Cursor a= MainActivity.db.get1DichVu("2");
+        if(a.getCount() == 0){
+            tiennuoc=1;
+        }
+        else{
+            while(a.moveToNext()){
+                b.setMaCP(a.getString(0));
+                b.setTEN_CP(a.getString(1));
+                b.setQUY_CACH(a.getString(2));
+                b.setDON_GIA(a.getString(3));
+            }
+            tiennuoc=Integer.parseInt(b.getDON_GIA());
+        }
+    }
 
 }
