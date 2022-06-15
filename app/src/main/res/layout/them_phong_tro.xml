@@ -32,6 +32,9 @@
             android:layout_height="wrap_content"
             android:hint="Tên hoặc số phòng"
             android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
     <LinearLayout
@@ -54,6 +57,9 @@
             android:hint="Số người tối đa"
             android:textSize="18dp"
             android:inputType="number"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
     <LinearLayout
@@ -74,6 +80,9 @@
             android:layout_height="wrap_content"
             android:hint="Ví dụ: 3x4"
             android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
 
     </LinearLayout>
@@ -96,6 +105,9 @@
             android:hint="Giá thuê phòng"
             android:textSize="18dp"
             android:inputType="number"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
 
     </LinearLayout>
@@ -118,6 +130,9 @@
             android:hint="Số điện hiện tại"
             android:textSize="18dp"
             android:inputType="number"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
     <LinearLayout
@@ -139,6 +154,9 @@
             android:hint="Số nước hiện tại"
             android:textSize="18dp"
             android:inputType="number"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
 
     </LinearLayout>
@@ -160,6 +178,9 @@
             android:layout_height="wrap_content"
             android:hint="Ví dụ: tolet ngoài"
             android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
 

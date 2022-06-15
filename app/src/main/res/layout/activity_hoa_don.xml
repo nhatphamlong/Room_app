@@ -28,12 +28,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+            android:shadowColor="@color/black"
             android:text="Đã thanh toán"/>
         <RadioButton
             android:id="@+id/rdChua"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+            android:shadowColor="@color/black"
             android:text="Chưa thanh toán"/>
     </RadioGroup>
     <TextView

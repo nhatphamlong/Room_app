@@ -20,6 +20,9 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:drawableLeft="@drawable/ic_taikhoan"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:hint="Tài khoản" />
         <EditText
             android:id="@+id/dkMatkhau"
@@ -30,6 +33,9 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:hint="Mật khẩu"/>
     </RelativeLayout>
 

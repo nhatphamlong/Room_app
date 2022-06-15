@@ -32,6 +32,9 @@
             android:layout_height="wrap_content"
             android:hint="điện, nước, ... "
             android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
     <LinearLayout
@@ -52,6 +55,9 @@
             android:layout_height="wrap_content"
             android:hint="Kwh, tháng, m3, ... "
             android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
     <LinearLayout
@@ -72,6 +78,9 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
     <LinearLayout

@@ -65,6 +65,9 @@
             android:inputType="number"
             android:hint="số điện của phòng "
             android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
     <LinearLayout
@@ -86,6 +89,9 @@
             android:inputType="number"
             android:hint="số nước của phòng "
             android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
     <LinearLayout
@@ -107,6 +113,9 @@
             android:hint="chi phí khác"
             android:inputType="number"
             android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             android:ems="10"/>
     </LinearLayout>
     <LinearLayout
