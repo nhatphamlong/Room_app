@@ -10,7 +10,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_matkhau.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/vongtronhd.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_dangky.xml" value="0.23805389404296876" />
+        <entry key="app/src/main/res/layout/activity_dangky.xml" value="0.27017974853515625" />
         <entry key="app/src/main/res/layout/activity_dangnhap.xml" value="0.22116851806640625" />
         <entry key="app/src/main/res/layout/activity_dich_vu.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_hoa_don.xml" value="0.15357666015625002" />
@@ -22,10 +22,10 @@
         <entry key="app/src/main/res/layout/dong_khach.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dong_phong_tro.xml" value="0.1" />
         <entry key="app/src/main/res/layout/donglayout.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/them_dich_vu.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/them_hoa_don.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/them_khach.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/them_phong_tro.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/them_dich_vu.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/them_hoa_don.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/them_khach.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/them_phong_tro.xml" value="0.25" />
         <entry key="app/src/main/res/menu/context_menu_phong.xml" value="0.1" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.1" />
         <entry key="app/src/main/res/menu/menu_phu.xml" value="0.1" />
